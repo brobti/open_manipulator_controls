@@ -5,10 +5,8 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-        - /Camera1
-        - /Camera1/Visibility1
       Splitter Ratio: 0.7425600290298462
-    Tree Height: 82
+    Tree Height: 130
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -81,6 +79,11 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          camera_stand_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           end_effector_link:
             Alpha: 1
             Show Axes: false
@@ -154,7 +157,7 @@ Visualization Manager:
         Show Workspace: false
         Start State Alpha: 1
         Start State Color: 0; 255; 0
-      Planning Scene Topic: move_group/monitored_planning_scene
+      Planning Scene Topic: /planning_scene
       Robot Description: robot_description
       Scene Geometry:
         Scene Alpha: 1
@@ -180,6 +183,11 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          camera_stand_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           end_effector_link:
             Alpha: 1
             Show Axes: false
@@ -230,108 +238,6 @@ Visualization Manager:
       Value: true
       Velocity_Scaling_Factor: 0.1
     - Class: rviz/Camera
-      Enabled: false
-      Image Rendering: background and overlay
-      Image Topic: ""
-      Name: Camera
-      Overlay Alpha: 0.5
-      Queue Size: 2
-      Transport Hint: raw
-      Unreliable: false
-      Value: false
-      Visibility:
-        "": true
-        Camera: true
-        Grid: true
-        MotionPlanning: true
-        Value: true
-      Zoom Factor: 1
-    - Class: rviz/Camera
-      Enabled: false
-      Image Rendering: background and overlay
-      Image Topic: /head_camera/image_raw
-      Name: Camera
-      Overlay Alpha: 0.5
-      Queue Size: 2
-      Transport Hint: compressedDepth
-      Unreliable: false
-      Value: false
-      Visibility:
-        "": true
-        Camera: true
-        Grid: true
-        MotionPlanning: true
-        Value: true
-      Zoom Factor: 1
-    - Class: rviz/Camera
-      Enabled: false
-      Image Rendering: background and overlay
-      Image Topic: /head_camera/image_raw
-      Name: Camera
-      Overlay Alpha: 0.5
-      Queue Size: 2
-      Transport Hint: compressed
-      Unreliable: false
-      Value: false
-      Visibility:
-        "": true
-        Camera: true
-        Grid: true
-        MotionPlanning: true
-        Value: true
-      Zoom Factor: 1
-    - Class: rviz/Camera
-      Enabled: false
-      Image Rendering: background and overlay
-      Image Topic: /head_camera/image_raw
-      Name: Camera
-      Overlay Alpha: 0.5
-      Queue Size: 2
-      Transport Hint: theora
-      Unreliable: false
-      Value: false
-      Visibility:
-        Camera: true
-        Camera_raw: true
-        Grid: true
-        MotionPlanning: true
-        Value: true
-      Zoom Factor: 1
-    - Class: rviz/Camera
-      Enabled: false
-      Image Rendering: background and overlay
-      Image Topic: /head_camera/image_raw
-      Name: Camera
-      Overlay Alpha: 0.5
-      Queue Size: 2
-      Transport Hint: raw
-      Unreliable: false
-      Value: false
-      Visibility:
-        "": true
-        Camera: true
-        Grid: true
-        MotionPlanning: true
-        Value: true
-      Zoom Factor: 1
-    - Class: rviz/Camera
-      Enabled: false
-      Image Rendering: background and overlay
-      Image Topic: /head_camera/image_raw
-      Name: Camera
-      Overlay Alpha: 0.5
-      Queue Size: 2
-      Transport Hint: compressed
-      Unreliable: false
-      Value: false
-      Visibility:
-        "": true
-        Camera: true
-        Grid: true
-        MotionPlanning: true
-        Value: true
-      Zoom Factor: 1
-    - Class: rviz/Camera
       Enabled: true
       Image Rendering: background and overlay
       Image Topic: /head_camera/image_raw
@@ -342,7 +248,6 @@ Visualization Manager:
       Unreliable: false
       Value: true
       Visibility:
-        Camera: true
         Grid: true
         MotionPlanning: true
         Value: true
@@ -384,8 +289,6 @@ Visualization Manager:
       Yaw: 5.014949321746826
     Saved: ~
 Window Geometry:
-  Camera:
-    collapsed: false
   Camera_raw:
     collapsed: false
   Displays:
@@ -399,9 +302,9 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000002000000000000021400000296fc0200000009fb000000100044006900730070006c006100790073010000003d000000e3000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a00560069006500770073000000010c0000011d000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000001600fffffffb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000126000001ad0000017d00fffffffb0000000c00430061006d00650072006100000003010000005c0000001600fffffffb0000000c00430061006d006500720061000000034c0000008f0000001600ffffff000000010000025000000296fc0200000005fb0000001400430061006d006500720061005f00720061007703000003df000000d40000025000000296fb0000000c00430061006d00650072006102000003df0000029800000250000000d2fb0000000c00430061006d006500720061000000003d000002960000001600fffffffb0000000c00430061006d006500720061000000003d000002960000001600fffffffb0000000c00430061006d006500720061000000003d000002960000000000000000000003cd0000029600000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000002000000000000021400000296fc0200000009fb000000100044006900730070006c006100790073010000003d00000113000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a00560069006500770073000000010c0000011d000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001560000017d0000017d00fffffffb0000000c00430061006d00650072006100000003010000005c0000000000000000fb0000000c00430061006d006500720061000000034c0000008f0000000000000000000000010000025000000296fc0200000005fb0000001400430061006d006500720061005f007200610077010000003d000002960000001600fffffffb0000000c00430061006d00650072006102000003df0000029800000280000001e0fb0000000c00430061006d006500720061000000003d000002960000000000000000fb0000000c00430061006d006500720061000000003d000002960000000000000000fb0000000c00430061006d006500720061000000003d000002960000000000000000000001770000029600000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 1511
   X: 72
-  Y: 114
+  Y: 77
