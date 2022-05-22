@@ -18,6 +18,9 @@
   <!-- controller utils -->
   <include file="$(find open_manipulator_hw)/launch/controller_utils.launch"/>
 
+  <!-- PID -->
+  <!--rosparam file="$(find open_manipulator_hw)/config/pid.yaml"/-->
+
   <!-- joint_trajectory_controller -->
   <group unless="$(arg sim)">
     <rosparam file="$(find open_manipulator_controllers)/config/joint_trajectory_controller.yaml" command="load"/>
